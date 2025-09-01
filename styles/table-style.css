@@ -1,0 +1,42 @@
+/* Table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Table cell styles */
+th,
+td {
+  border: 1px solid #ddd;
+  width: 33%;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Header cell styles */
+th {
+  background-color: #f2f2f2;
+}
+
+.lose {
+  background-color: #c0392b;
+  color: white;
+}
+
+.win {
+  background-color: #f1c40f;
+  color: white;
+}
+
+.h-pos {
+  color: #2ecc71;
+}
+
+.h-col {
+  color: #f1c40f;
+}
+
+.outer-columns {
+  width: 1%;
+  white-space: nowrap;
+}

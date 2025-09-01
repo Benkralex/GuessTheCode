@@ -1,0 +1,18 @@
+/* Animation for guess transfer */
+.animated {
+  animation-play-state: running;
+}
+
+@keyframes moveAndShrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0) translateX(-50px) translateY(0); /* Adjust scale factor as needed */
+  }
+}
+
+/* Style your guess table cells */
+.guess-entry {
+  text-align: center;
+}

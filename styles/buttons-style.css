@@ -1,0 +1,97 @@
+/* Large button styles */
+.button-lg {
+  margin: 6px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Container for buttons */
+#buttonsContainer {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Button styles */
+.button {
+  width: 50px;
+  height: 50px;
+  margin: 8px;
+  background-color: #ccc;
+  border: 2px solid #0c0c0c;
+  border-radius: 5px;
+  font-size: 24px;
+  font-family: inherit;
+  color: white;
+  font-weight: bold;
+}
+
+.button-sm {
+  width: 30px;
+  height: 30px;
+  margin: 6px;
+  background-color: #ccc;
+  border: 1.4px solid #0c0c0c;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: inherit;
+  color: white;
+  font-weight: bold;
+}
+
+.button-sm[disabled] {
+  pointer-events: none; /* Die Buttons können nicht angeklickt werden */
+  opacity: 1; /* Die Opazität bleibt gleich, sodass die Buttons nicht aufgehellt werden */
+}
+
+/* Hover effect for submit button */
+#submitGuessButton:hover {
+  background-color: #45a049;
+}
+
+/* Styles for Button 1 */
+button.btn-1 {
+  background-color: #2c3e50; /* Dunkles Blau */
+}
+
+/* Styles for Button 2 */
+button.btn-2 {
+  background-color: #2ecc71; /* Helleres Grün */
+}
+
+/* Styles for Button 3 */
+button.btn-3 {
+  background-color: #c0392b; /* Feuerrot */
+}
+
+/* Styles for Button 4 */
+button.btn-4 {
+  background-color: #3498db; /* Lebhaftes Blau */
+}
+
+/* Styles for Button 5 */
+button.btn-5 {
+  background-color: #8e44ad; /* Lila */
+}
+
+/* Styles for Button 6 */
+button.btn-6 {
+  background-color: #f1c40f; /* Helles Gelb */
+}
+
+/* Styles for Button 7 */
+button.btn-7 {
+  background-color: #16a085; /* Smaragdgrün */
+}
+
+/* Styles for Button 8 */
+button.btn-8 {
+  background-color: #d35400; /* Kürbis */
+}

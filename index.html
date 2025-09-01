@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/vnd.icon" href="gtc.ico" />
+    <title>Guess The Code</title>
+    <link rel="stylesheet" href="styles/general-style.css" />
+    <link rel="stylesheet" href="styles/buttons-style.css" />
+    <link rel="stylesheet" href="styles/input-style.css" />
+    <link rel="stylesheet" href="styles/modal-style.css" />
+    <link rel="stylesheet" href="styles/game-style.css" />
+    <link rel="stylesheet" href="styles/table-style.css" />
+  </head>
+  <body>
+    <span
+      onclick="manual()"
+      class="material-symbols-rounded"
+      id="help"
+      style="
+        position: fixed;
+        top: 30px; /* Anpassen, um die gewünschte vertikale Position festzulegen */
+        right: 30px; /* Anpassen, um die gewünschte horizontale Position festzulegen */
+      "
+      >help</span
+    >
+    <span
+      onclick="music()"
+      class="material-symbols-rounded"
+      id="music-control"
+      style="
+        position: fixed;
+        top: 30px; /* Anpassen, um die gewünschte vertikale Position festzulegen */
+        left: 30px; /* Anpassen, um die gewünschte horizontale Position festzulegen */
+      "
+      >play_circle</span
+    >
+    <div class="container" id="main">
+      <audio id="music" src="bg-music.wav" loop></audio>
+      <h1 id="heading">Guess The Code</h1>
+      <div id="controlls">
+        <div id="buttonsContainer">
+          <button class="button btn-1" id="1" draggable="true">1</button>
+          <button class="button btn-2" id="2" draggable="true">2</button>
+          <button class="button btn-3" id="3" draggable="true">3</button>
+          <button class="button btn-4" id="4" draggable="true">4</button><br />
+          <button class="button btn-5" id="5" draggable="true">5</button>
+          <button class="button btn-6" id="6" draggable="true">6</button>
+          <button class="button btn-7" id="7" draggable="true">7</button>
+          <button class="button btn-8" id="8" draggable="true">8</button>
+        </div>
+        <div class="inputs-row">
+          <div id="guessInput1" class="input-field" data-editable="false"></div>
+          <div id="guessInput2" class="input-field" data-editable="false"></div>
+          <div id="guessInput3" class="input-field" data-editable="false"></div>
+          <div id="guessInput4" class="input-field" data-editable="false"></div>
+        </div>
+        <div>
+          <button
+            class="button-lg"
+            id="submitGuessButton"
+            onclick="submitGuess()"
+          >
+            Prüfen
+          </button>
+          <button class="button-lg" id="giveUpButton" onclick="giveUp()">
+            Aufgeben
+          </button>
+        </div>
+      </div>
+      <table id="feedback">
+        <tr>
+          <th class="h-pos outer-columns">
+            <span class="material-symbols-rounded"> check </span>
+          </th>
+          <th style="width: auto">Code</th>
+          <th class="h-col outer-columns">
+            <span class="material-symbols-rounded"> warning </span>
+          </th>
+        </tr>
+      </table>
+    </div>
+    <div id="explenationModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>So funktioniert's</h2>
+        <h3>Steuerung</h3>
+        <p>
+          Du kannst Zahlen/Farben einfach per Drag and Drop in das gewünschte
+          Eingabefeld ziehen. Alternativ kannst du auch auf eine Zahl/Farbe
+          tippen, um sie automatisch im nächsten verfügbaren Eingabefeld (von
+          links nach rechts) einzufügen. Sobald alle Felder ausgefüllt sind,
+          klicke auf "Prüfen".
+        </p>
+        <br />
+        <h3>Rückmeldung</h3>
+        <p>
+          In der Tabelle werden alle deine Versuche angezeigt. Ein grüner Haken
+          (<span class="material-symbols-rounded h-pos"> check </span>) zeigt
+          an, wie viele Zahlen/Farben an der richtigen Position stehen. Ein
+          gelbes Ausrufezeichen (<span class="material-symbols-rounded h-col">
+            warning </span
+          >) zeigt an, wie viele Zahlen zwar im Code vorkommen, aber nicht an
+          der richtigen Position sind.<br />
+          <b>Achtung</b>: Es können Zahlen/Farben mehrfach im Code vorkommen.
+        </p>
+        <br />
+        <h3>Ziel</h3>
+        <p>
+          Dein Ziel ist es, den zufällig generierten Code anhand dieser
+          Rückmeldungen zu erraten.
+        </p>
+        <br />
+        <h3>Musik</h3>
+        <p>
+          Über den Knopf rechts oben kann die von einer KI generierte
+          Hintergrund-Musik aktiviert bzw. deaktiviert werden.
+        </p>
+        <br /><br /><br /><br /><br />
+      </div>
+    </div>
+    <script src="script/saves.js
+    "></script>
+    <script src="script/music.js"></script>
+    <script src="script/animate.js"></script>
+    <script src="script/ui.js"></script>
+    <script src="script/modal.js"></script>
+    <script src="script/GuessTheCode.js"></script>
+    <script src="script/game.js"></script>
+  </body>
+</html>
